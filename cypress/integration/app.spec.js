@@ -23,8 +23,6 @@ describe('start', () => {
 
     cy.get('button').contains('X').click()
 
-    cy.get('button').contains('X').click()
-
     cy.get('img[alt="seeback"]').click();
 
     cy.get('img[alt="seeback"]').click();

@@ -1,39 +1,21 @@
 ## 더블앤씨 기업과제 저장소입니다.
 
-## [Go Demo🚀](https://620c2f3c2d75ad1ebfae4eeb--youthful-mirzakhani-d90483.netlify.app/)
-  url= https://sad-jackson-0809cb.netlify.app/
+## [Go Demo🚀]
 
-## Member
-
-<table>
-<tr>
-<td align="center"><a href="https://github.com/WongueShin"><img src="https://media.vlpt.us/images/yeonbee/post/a3b02f02-0826-4cc9-b63e-9ddce5fbd857/wongyu.jpg" width="100%" /></a></td>
-<td align="center"><a href="https://github.com/zerochae"><img src="https://avatars.githubusercontent.com/u/84373490?v=4" width="90%" /></a></td>
-<td align="center"><a href="https://github.com/yunred"><img src="https://avatars.githubusercontent.com/u/84527643?v=4" width="90%" /></a></td>
-<td align="center"><a href="https://github.com/jyb1798"><img src="https://avatars.githubusercontent.com/u/64634495?s=400&u=3da5cb5a3ff4338da83a58a23df0608da5092ddc&v=4" width="100%" /></a></td>
-</tr>
-<tr>
-<td align="center"><b>신원규(팀장)</b></td>
-<td align="center"><b>권영채</b></td>
-<td align="center"><b>김서윤</b></td>
-<td align="center"><b>지연비</b></td>
-</tr>
-<tr>
-<td align="center"><b>FE Developer</b></td>
-<td align="center"><b>FE Developer</b></td>
-<td align="center"><b>FE Developer</b></td>
-<td align="center"><b>FE Developer</b></td>
-</tr>
-</table>
-
-<br />
-
-## 역할 분담
+## Member별 역할분담
 
 <table>
 <tr>
 <td align="center"><b>팀원<b></td>
 <td align="center"><b>역할</b></td>
+</tr>
+<tr>
+<td>지연비</td>
+<td style="fontsize=16"> Nav바 / SEO 작업 </td>
+</tr>
+<tr>
+<td>권영채</td>
+<td> 고객 센터 / 상품구매 페이지 / 공통 컴포넌트 / </td>
 </tr>
 <tr>
 <td>신원규</td>
@@ -42,14 +24,6 @@
 <tr>
 <td>김서윤</td>
 <td> Nav바 / 캐러셀 슬라이드 / 공통 컴포넌트 / </td>
-</tr>
-<tr>
-<td>권영채</td>
-<td> 고객 센터 / 상품구매 페이지 / 공통 컴포넌트 / </td>
-</tr>
-<tr>
-<td>지연비</td>
-<td> Nav바 / SEO 작업 </td>
 </tr>
 
 </table>
@@ -155,13 +129,3 @@ $ npm start
 ![Animation](https://user-images.githubusercontent.com/84373490/154145888-57aa53c0-7b13-4c3f-845a-34d16af13348.gif)
 
 `cypress`를 통해 주요 로직을 테스트하였습니다.
-
-## 프로젝트 후기
-
-🎹신원규 : 처음 접하는 기술을 가지고, 짧은 시간 내에 유의미한 성과를 낼 수 있도록, 주도적이고 효율적으로 기술을 학습하는 방법을 터득하도록 요구하는 과제였던거 같습니다. 체감 난이도가 상당하였고, 따라서 과제의 모든 부분을 완벽하게 구현할수는 없었기에 제한된 시간 하에서 각 Task의 우선순위를 파악하고 쏟아지는 이슈들을 관리하며 빠른 템포로 인적, 시간자원 관리 역량을 키울수 있었던 좋은 기회였습니다.
-
-🎇김서윤 : 프로젝트 전 재사용될 컴포넌트를 정하여 미리 구현하는 방식으로 진행하였고, API 호출 시, 어떤 방식으로 호출할 것인지 팀원들과 회의를 하는 과정에서 SSR과 CSR에 대해 조금 더 생각해보는 시간을 가질 수 있었습니다.
-
-🎈권영채 : 시간가는줄 모르고 날을 새워서 프로젝트를 진행하였습니다. SSR과 CSR이 어떤 상황에서, 구별되어 사용되어야 할지 생각할 수 있었고, 나아가 개발자가 아닌 사용자의 관점에서도 고민해 보게된 의미있는 프로젝트였습니다. 
-
-💖지연비 : Next.js와 SSR을 처음으로 구현해본 프로젝트였습니다. bottom-up 방식의 개발과 팀원들과의 활발한 의사소통 덕분에 효율적인 작업을 했다고 생각합니다.
