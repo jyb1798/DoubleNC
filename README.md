@@ -19,7 +19,7 @@
 </tr>
 <tr>
 <td>신원규</td>
-<td>ServerSideProps 설정 / 브랜드 페이지 / API fetch </td>
+<td>브랜드 페이지 / API fetch </td>
 </tr>
 <tr>
 <td>김서윤</td>
