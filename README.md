@@ -11,19 +11,19 @@
 </tr>
 <tr>
 <td>지연비</td>
-<td style="fontsize=16"> Nav바 / SEO 작업 </td>
+<td style="fontsize=16"> 조건부 Nav 바 / E2E 테스트 / SEO 작업 / 배포 </td>
 </tr>
 <tr>
 <td>권영채</td>
-<td> 고객 센터 / 상품구매 페이지 / 공통 컴포넌트 / </td>
+<td>고객 센터 / 상품구매 페이지 </td>
 </tr>
 <tr>
 <td>신원규</td>
-<td> 프로젝트 매니지먼트 / 프로젝트 초기세팅 / ServerSideProps 설정 / 브랜드 페이지 / page 레이아웃 구성 / API fetch </td>
+<td>ServerSideProps 설정 / 브랜드 페이지 / API fetch </td>
 </tr>
 <tr>
 <td>김서윤</td>
-<td> Nav바 / 캐러셀 슬라이드 / 공통 컴포넌트 / </td>
+<td>공통 컴포넌트 / 캐러셀  </td>
 </tr>
 
 </table>
@@ -69,14 +69,6 @@ $ git clone https://github.com/PreOnboardingTeam-16/3rdweek-ncnc-task
 $ npm install
 $ npm start
 ```
-
-<br/>
-
-## 이슈정리
-
-### 'Bottom-Up' 방식의 개발
-
-우리팀은 지난번 과제에서 `Bottom-Up` 방식의 개발방식을 선택했습니다. 재사용할 수 있는 코드의 사용성을 높이고, 전체적인 코드가 결합되기 전에 계획을 유연하게 수정하는 등 효율성이 올라갔다고 판단하여 이번 과제에서도 동일한 방식을 선택하였습니다. `Bottom-Up` 방식의 개발을 좀 더 효과적으로 하기 위해, gather에서 수시로 커뮤니케이션을 하는 노력을 기울였습니다.
 
 <br/>
 
