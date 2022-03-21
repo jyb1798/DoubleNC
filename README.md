@@ -114,7 +114,7 @@ Next.js에서 기본적으로 내장되어있는 styled-jsx을 사용하여 스�
 <br/>
 
 ## E2E Test
-![Animation]![resize_gif](https://user-images.githubusercontent.com/64634495/159240690-ea17939d-355e-4b2a-912a-3fa4f00a26e6.gif)
+![resize_gif](https://user-images.githubusercontent.com/64634495/159240690-ea17939d-355e-4b2a-912a-3fa4f00a26e6.gif)
 
 
     `cypress`를 통해 주요 로직을 테스트하였습니다.
