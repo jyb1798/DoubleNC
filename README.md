@@ -88,40 +88,37 @@ $ npm start
 
 <br/>
 
-### [⚡구현 중 기술적 이슈들](https://determined-kingfisher-cb7.notion.site/8efd61e0d42143c1b7c20d0168100fc5)
+### 기술적 이슈
+
+### styled-jsx 엘리먼트 width 추출
+
+```jsx
+const CarouselStyle = {
+  transition: isSideImg ? '0ms' : 'transform 1s ease',
+  transform: `translate(${step * CarouselWidth * -1}px)`,
+};
+const div = (node: any) => {
+  if (node !== null) {
+    setCarouselWidth(node.getBoundingClientRect().width);
+  }
+};
+return (
+  <div className={style.Container} ref={div}>
+...
+
+
+Next.js에서 기본적으로 내장되어있는 styled-jsx을 사용하여 스타일을 적용했다. styled-coponent와 비슷한 점이 많아 사용에는 큰 어려움이 없었지만 동적인 스타일링에 제약이 있었다. 조건부 스타일을 위해 인라인 스타일을 작성하였다. 스타일을 스플리팅하고 props로 값을 주고 받는다면 쉽게 끝날 문제였지만 지원되지 않았기에 inline style에서 스타일을 적용했다.
+
+**`Element.getBoundingClientRect()`** 메서드는 엘리먼트의 크기와 뷰포트
+에 상대적인 위치 정보를 제공하는 `DOMRect`객체를 반환한다. 나는 div의 width를 알기 위해 `getBoundingClientRect().width` 로 값을 받아왔고, 제대로 구현할 수 있었다. 매번 styled-component만 사용하다가 다른 도구를 사용해보았고, 그동안 몰랐던 함수들도 써보면서 익힐 수 있었다.
+
+
 
 <br/>
-
-## 디렉토리 구조
-
-```
-├─public
-│  └─Images
-├─components
-│  ├─APICompo
-│  ├─Carousel
-│  ├─Category
-│  ├─CategoryContainer
-│  ├─ItemContainer
-│  ├─Nav
-│  ├─ProductContainer
-│  ├─ProductContent
-│  ├─Question
-│  ├─QuestionContainer
-│  └─Types
-├─const
-├─Hooks
-├─Types
-├─pages
-│  ├─brands
-│  ├─categories
-│  └─items
-└─styles
-
-```
 
 ## E2E Test
 
 ![Animation]
 
 `cypress`를 통해 주요 로직을 테스트하였습니다.
+```
