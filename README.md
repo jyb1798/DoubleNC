@@ -115,7 +115,8 @@ Next.js에서 기본적으로 내장되어있는 styled-jsx을 사용하여 스�
 
 ## E2E Test
 ![Animation](https://user-images.githubusercontent.com/64634495/159239243-18e2bfbf-c81e-4ef1-baab-385620515820.gif)
-`cypress`를 통해 주요 로직을 테스트하였습니다.
+
+    `cypress`를 통해 주요 로직을 테스트하였습니다.
 
 
 
