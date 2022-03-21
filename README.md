@@ -1,6 +1,6 @@
 ## 더블앤씨 기업과제 저장소입니다.
 
-## [Go Demo🚀]
+## [Go Demo🚀](https://double-nc-jyb1798.vercel.app/)
 
 ## Member별 역할분담
 
@@ -115,10 +115,8 @@ Next.js에서 기본적으로 내장되어있는 styled-jsx을 사용하여 스�
 
 ## E2E Test
 
-![Animation]
+[Animation]
+![CypressGIF](https://user-images.githubusercontent.com/64634495/159239243-18e2bfbf-c81e-4ef1-baab-385620515820.gif)
 
 `cypress`를 통해 주요 로직을 테스트하였습니다.
 
-```
-
-```
