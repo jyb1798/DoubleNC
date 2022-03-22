@@ -1,22 +1,22 @@
-import style from './NavBar.module.css';
-import css from 'styled-jsx/css';
-import Link from 'next/link';
+import style from "./NavBar.module.css";
+import css from "styled-jsx/css";
+import Link from "next/link";
 // import Image from 'next/image';
-import { useRouter } from 'next/router';
-import { useState, useEffect, MouseEvent, TouchEvent } from 'react';
-import * as C from 'Const/Const';
-import * as H from 'Hooks/Hooks';
-import * as T from 'Types/Types';
-import NavSideBar from './NavSideBar';
+import { useRouter } from "next/router";
+import { useState, useEffect, MouseEvent, TouchEvent } from "react";
+import * as C from "Const/Const";
+import * as H from "Hooks/Hooks";
+import * as T from "Types/Types";
+import NavSideBar from "./NavSideBar";
 
-interface propsTypes{
-  brandName? : string
+interface propsTypes {
+  brandName?: string;
 }
 
-type tempType = Record<string, string>
-type NavdataType = Record<string, string>
+type tempType = Record<string, string>;
+type NavdataType = Record<string, string>;
 
-const NavBar = ( { brandName }:propsTypes ): JSX.Element => {
+const NavBar = ({ brandName }: propsTypes): JSX.Element => {
   const [Navdata, setNavData] = useState<NavdataType>({});
   const [isSideBarOpen, setSideBarOpen] = useState<boolean>(true);
   const [NavdataList, setNavDataList] = useState<any[]>([]);
@@ -28,7 +28,7 @@ const NavBar = ( { brandName }:propsTypes ): JSX.Element => {
   useEffect(() => {
     (async () => {
       const APIdata = await H.Fetch(C.CONCATEGORY_API);
-      const temp:tempType = {};
+      const temp: tempType = {};
       if (APIFlag) {
         APIdata.conCategory1s.forEach((els: any) => {
           temp[els.id] = els.name;
@@ -45,7 +45,7 @@ const NavBar = ( { brandName }:propsTypes ): JSX.Element => {
 
   const routerPath = useRouter().asPath;
   useEffect(() => {
-    setSelected(Number(routerPath.replace(/[^0-9]/g, '')));
+    setSelected(Number(routerPath.replace(/[^0-9]/g, "")));
   }, [routerPath]);
 
   const helpCenterHandler = () => {
@@ -62,7 +62,7 @@ const NavBar = ( { brandName }:propsTypes ): JSX.Element => {
           <Link href="/" passHref>
             <div className={style.navContainer}>
               <a className={style.navIcon}>
-                {routerPath === '/' ? (
+                {routerPath === "/" ? (
                   <div onClick={helpCenterHandler}>
                     <img
                       src="/images/hamburgermenu.png"
@@ -71,7 +71,7 @@ const NavBar = ( { brandName }:propsTypes ): JSX.Element => {
                       height="30px"
                     />
                   </div>
-                ) : routerPath === '/contacts' ? (
+                ) : routerPath === "/contacts" ? (
                   <div className={style.navImage}>
                     <img
                       src="/images/close.png"
@@ -93,58 +93,61 @@ const NavBar = ( { brandName }:propsTypes ): JSX.Element => {
               </a>
               <div>
                 <p>
-                  {
-                    brandName?
-                    brandName:
-                    routerPath === '/'
-                    ? '니콘내콘'
-                    : routerPath === '/contacts'
-                    ? '고객센터'
-                    : Navdata[routerPath.slice(12)]
-                    }
+                  {brandName
+                    ? brandName
+                    : routerPath === "/"
+                    ? "미콘유콘"
+                    : routerPath === "/contacts"
+                    ? "고객센터"
+                    : Navdata[routerPath.slice(12)]}
                 </p>
               </div>
-              <div className={style.noneImage}></div>     
+              <div className={style.noneImage}></div>
             </div>
           </Link>
-          { routerPath == '/' || routerPath == '/contacts' || /\/items/.test(routerPath) || brandName? <></> :
-          <section className={style.TopCategories}>
-            <div className={style.subTitleWrapper}>
-              <div
-                className={style.NavdataList}
-              >
-                {NavdataList.map((e, idx: number) => (
-                  <button
-                    key={e.id}
-                    className={style.NavdataItem}
-                    onClick={() => {
-                      onSelectCategory(e.id);
-                    }}
-                    style={{
-                      borderBottom: `${
-                        selected === e.id ? 'solid 2px #ff5757' : '#ffffff'
-                      }`,
-                    }}
-                  >
-                    {routerPath === '/' ? null : routerPath === '/contacts' ? null : (
-                      <Link href={`/categories/${e.id}`}>
-                        <span
-                          className={style.CategoryText}
-                          style={{
-                            color: `${
-                              selected === e.id ? '#ff5757' : '#000000'
-                            }`,
-                          }}
-                        >
-                          {e.name}
-                        </span>
-                      </Link>
-                    )}
-                  </button>
-                ))}
+          {routerPath == "/" ||
+          routerPath == "/contacts" ||
+          /\/items/.test(routerPath) ||
+          brandName ? (
+            <></>
+          ) : (
+            <section className={style.TopCategories}>
+              <div className={style.subTitleWrapper}>
+                <div className={style.NavdataList}>
+                  {NavdataList.map((e, idx: number) => (
+                    <button
+                      key={e.id}
+                      className={style.NavdataItem}
+                      onClick={() => {
+                        onSelectCategory(e.id);
+                      }}
+                      style={{
+                        borderBottom: `${
+                          selected === e.id ? "solid 2px #ff5757" : "#ffffff"
+                        }`,
+                      }}
+                    >
+                      {routerPath === "/" ? null : routerPath ===
+                        "/contacts" ? null : (
+                        <Link href={`/categories/${e.id}`}>
+                          <span
+                            className={style.CategoryText}
+                            style={{
+                              color: `${
+                                selected === e.id ? "#ff5757" : "#000000"
+                              }`,
+                            }}
+                          >
+                            {e.name}
+                          </span>
+                        </Link>
+                      )}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
-          </section>}
+            </section>
+          )}
         </div>
       ) : (
         <NavSideBar setSideBarOpen={setSideBarOpen} />

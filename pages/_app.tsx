@@ -31,8 +31,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:url" content="https://ncnc.app" />
 
         <meta property="twitter:card" content="summary" />
-        <meta property="twitter:site" content="니콘내콘" />
-        <meta property="twitter:title" content="니콘내콘" />
+        <meta property="twitter:site" content="미콘유콘" />
+        <meta property="twitter:title" content="미콘유콘" />
         <meta
           property="twitter:description"
           content="모바일 쿠폰 중고거래 사이트. 남들은 정가로 살 때, 나는 할인가로 산다"
